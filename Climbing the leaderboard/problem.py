@@ -2,7 +2,7 @@ import os
 
 
 def climbingLeaderboard(scores, user_scores):
-    user_positions = []
+    user_ranks = []
     unique_scores = list(dict.fromkeys(scores))
     unique_scores.sort(reverse=True)
 
@@ -16,7 +16,7 @@ def climbingLeaderboard(scores, user_scores):
             middle = (first + last) // 2
             if unique_scores[middle] == user_score:
                 found = True
-                user_positions.append(middle + 1)
+                user_ranks.append(middle + 1)
             else:
                 if unique_scores[middle] > user_score:
                     first = middle + 1
@@ -25,13 +25,13 @@ def climbingLeaderboard(scores, user_scores):
 
         if not found:
             if first > last:
-                user_positions.append(first + 1)
+                user_ranks.append(first + 1)
             elif last <= 0:
-                user_positions.append(1)
+                user_ranks.append(1)
             else:
-                user_positions.append(middle + 1)
+                user_ranks.append(middle + 1)
 
-    return user_positions
+    return user_ranks
 
 
 if __name__ == '__main__':
