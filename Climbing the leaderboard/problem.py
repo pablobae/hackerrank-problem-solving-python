@@ -1,12 +1,12 @@
 import os
 
 
-def climbingLeaderboard(scores, alice):
-    alice_positions = []
+def climbingLeaderboard(scores, user_scores):
+    user_positions = []
     unique_scores = list(dict.fromkeys(scores))
     unique_scores.sort(reverse=True)
 
-    for alice_score in alice:
+    for user_score in user_scores:
         num_scores = len(unique_scores)
         last = num_scores - 1
         first = 0
@@ -14,24 +14,24 @@ def climbingLeaderboard(scores, alice):
         found = False
         while first <= last < num_scores and not found:
             middle = (first + last) // 2
-            if unique_scores[middle] == alice_score:
+            if unique_scores[middle] == user_score:
                 found = True
-                alice_positions.append(middle + 1)
+                user_positions.append(middle + 1)
             else:
-                if unique_scores[middle] > alice_score:
+                if unique_scores[middle] > user_score:
                     first = middle + 1
                 else:
                     last = middle - 1
 
         if not found:
             if first > last:
-                alice_positions.append(first + 1)
+                user_positions.append(first + 1)
             elif last <= 0:
-                alice_positions.append(1)
+                user_positions.append(1)
             else:
-                alice_positions.append(middle + 1)
+                user_positions.append(middle + 1)
 
-    return alice_positions
+    return user_positions
 
 
 if __name__ == '__main__':
