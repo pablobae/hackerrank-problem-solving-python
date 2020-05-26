@@ -9,4 +9,5 @@ Solutions in Python for some [Problem Solving exercises](https://www.hackerrank.
 | Problem | Level |
 | --- | --- | 
 | Climbing the leaderboard | Medium |
+| Time in words | Medium |
 
