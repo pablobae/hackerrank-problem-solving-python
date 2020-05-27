@@ -7,7 +7,8 @@ Solutions in Python for some [Problem Solving exercises](https://www.hackerrank.
 ## List of exercises
 
 | Problem | Level |
-| --- | --- | 
+| --- | --- |
+| Morgan and a String | Expert |
 | Climbing the leaderboard | Medium |
 | Time in words | Medium |
 
