@@ -9,6 +9,7 @@ Solutions in Python for some [Problem Solving exercises](https://www.hackerrank.
 | Problem | Level |
 | --- | --- |
 | Morgan and a String | Expert |
+| Sherlock & Valid strings | Medium |
 | ExtraLong factorial | Medium |
 | Climbing the leaderboard | Medium |
 | Time in words | Medium |
